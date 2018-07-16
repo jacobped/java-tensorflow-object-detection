@@ -42,7 +42,7 @@ Example:
 nvidia-docker run --rm -it -p 8888:8888 -p 6006:6006 -v /home/jacob/andet/training/docker-training-shared:/root/sharedfolder:Z tensorflow-improved:latest-gpu
 ```
 
-**Be aware!** GPU training is a lot faster than CPU, but it requires an Nvidia GPU and Nvidia Cuda to be installed and working on the host machine.
+**Be aware!** GPU training is a lot faster than CPU, but it requires a Nvidia GPU and *Nvidia Cuda* to be installed and working on the host machine.
 It also requires the host to have *NVIDIA Container Runtime for Docker* installed.  
 You can read more about it here: https://github.com/NVIDIA/nvidia-docker  
 You can test if it's working by running the following test container with the command below. If it doesn't throw an error, you're golden.
