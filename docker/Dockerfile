@@ -6,7 +6,15 @@
 #FROM tensorflow/tensorflow:latest-devel
 #FROM tensorflow/tensorflow:1.9.0-rc1-devel
 FROM tensorflow/tensorflow:1.8.0-devel
-MAINTAINER Jacob Pedersen <jacob@jacobpedersen.dk>
+
+ARG BUILD_DATE
+ARG VCS_REF
+
+MAINTAINER jacobpeddk
+LABEL maintainer="jacobpeddk"
+LABEL org.label-schema.build-date=$BUILD_DATE
+LABEL org.label-schema.vcs-url="https://github.com/jacobped/java-tensorflow-object-detection"
+LABEL org.label-schema.vcs-ref=$VCS_REF
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV RUNLEVEL 1
@@ -32,7 +40,9 @@ RUN apt-get update -y && apt-get install -y \
     python-tk \
     cython \
     vim \
-    less
+    less && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 # Install extra python dependencies with pip
 RUN pip --no-cache-dir install \
@@ -73,4 +83,3 @@ WORKDIR /root/sharedfolder
 EXPOSE 8888/tcp
 # TensorBoard
 EXPOSE 6006/tcp
-

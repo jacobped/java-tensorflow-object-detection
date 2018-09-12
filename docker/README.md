@@ -1,4 +1,7 @@
 # Docker containers for TensorFlow Object-Detection
+[![Docker Pulls](https://img.shields.io/docker/pulls/jacobpeddk/tensorflow-improved.svg)](https://hub.docker.com/r/jacobpeddk/tensorflow-improved)
+[![Docker Stars](https://img.shields.io/docker/stars/jacobpeddk/tensorflow-improved.svg)](https://hub.docker.com/r/jacobpeddk/tensorflow-improved)
+
 TensorFlow Docker containers with Improvements and fixes for training Objekt Detection models.  
 Can also be used to train models for classification of entire images.
 
@@ -15,18 +18,26 @@ I'd recommend mapping a directory into the containers, so you can have the train
 This and related documents will expect the host folder with the data to be mapped to: `/root/sharedfolder`  
 
 ### CPU container
+[![](https://images.microbadger.com/badges/image/jacobpeddk/tensorflow-improved.svg)](https://microbadger.com/images/jacobpeddk/tensorflow-improved "Container Image size and layers")
+[![](https://images.microbadger.com/badges/commit/jacobpeddk/tensorflow-improved.svg)](https://microbadger.com/images/jacobpeddk/tensorflow-improved "Current commit that the container is build from")
+[![](https://images.microbadger.com/badges/version/jacobpeddk/tensorflow-improved.svg)](https://microbadger.com/images/jacobpeddk/tensorflow-improved "Container version")
+
 For launching the container that uses the CPU for training, use the following command:
 ```
 docker run --rm -it -p 8888:8888 -p 6006:6006 -v <host path>:/root/sharedfolder:Z tensorflow-improved:latest
 ```
 
-**Remember to replace \<host path> with the actual path on your host machine!**  
+**Remember to replace \<host path\> with the actual path on your host machine!**  
 Example:
 ```
 docker run --rm -it -p 8888:8888 -p 6006:6006 -v /home/jacob/andet/training/docker-training-shared:/root/sharedfolder:Z tensorflow-improved:latest
 ```
 
 ### GPU container
+[![](https://images.microbadger.com/badges/image/jacobpeddk/tensorflow-improved:latest-gpu.svg)](https://microbadger.com/images/jacobpeddk/tensorflow-improved "Container Image size and layers")
+[![](https://images.microbadger.com/badges/commit/jacobpeddk/tensorflow-improved:latest-gpu.svg)](https://microbadger.com/images/jacobpeddk/tensorflow-improved "Current commit that the container is build from")
+[![](https://images.microbadger.com/badges/version/jacobpeddk/tensorflow-improved:latest-gpu.svg)](https://microbadger.com/images/jacobpeddk/tensorflow-improved "Container version")
+
 For launching the container that uses the GPU for training, use the following command:
 ```
 nvidia-docker run --rm -it -p 8888:8888 -p 6006:6006 -v <host path>:/root/sharedfolder:Z tensorflow-improved:latest-gpu
