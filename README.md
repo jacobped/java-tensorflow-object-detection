@@ -1,4 +1,7 @@
 # Object Detection with TensorFlow and Java
+[![Docker Pulls](https://img.shields.io/docker/pulls/jacobpeddk/tensorflow-improved.svg)](https://hub.docker.com/r/jacobpeddk/tensorflow-improved)
+[![Docker Stars](https://img.shields.io/docker/stars/jacobpeddk/tensorflow-improved.svg)](https://hub.docker.com/r/jacobpeddk/tensorflow-improved)
+
 I've gone trough a lot of trouble for figuring out how to both prepare a dataset, train a model with TensorFlow, and how to use it from a Java program.  
 So from all my effort, this repository contains somewhat detailed guides on how you can train your own model.
 
@@ -18,3 +21,12 @@ You can find the fairly detailed guide on how to prepare a dataset and train a m
 ## [Docker containers](docker)
 Information about the customized containers, can be found in [the folder named docker.](docker)
 
+### CPU Container
+[![](https://images.microbadger.com/badges/image/jacobpeddk/tensorflow-improved.svg)](https://microbadger.com/images/jacobpeddk/tensorflow-improved "Container Image size and layers")
+[![](https://images.microbadger.com/badges/commit/jacobpeddk/tensorflow-improved.svg)](https://microbadger.com/images/jacobpeddk/tensorflow-improved "Current commit that the container is build from")
+[![](https://images.microbadger.com/badges/version/jacobpeddk/tensorflow-improved.svg)](https://microbadger.com/images/jacobpeddk/tensorflow-improved "Container version")
+
+### GPU Container
+[![](https://images.microbadger.com/badges/image/jacobpeddk/tensorflow-improved:latest-gpu.svg)](https://microbadger.com/images/jacobpeddk/tensorflow-improved "Container Image size and layers")
+[![](https://images.microbadger.com/badges/commit/jacobpeddk/tensorflow-improved:latest-gpu.svg)](https://microbadger.com/images/jacobpeddk/tensorflow-improved "Current commit that the container is build from")
+[![](https://images.microbadger.com/badges/version/jacobpeddk/tensorflow-improved:latest-gpu.svg)](https://microbadger.com/images/jacobpeddk/tensorflow-improved "Container version")
